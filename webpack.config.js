@@ -65,6 +65,14 @@ module.exports = {
     },
   },
   plugins: [
+    new webpack.DefinePlugin({
+      process: {
+        env: {
+          REACT_APP_GOOGLE_SERVICE_ACCOUNT_EMAIL:
+            process.env.REACT_APP_GOOGLE_SERVICE_ACCOUNT_EMAIL,
+        },
+      },
+    }),
     new webpack.HotModuleReplacementPlugin(),
     // new ESLintPlugin({
     //   files: path.resolve(__dirname, "src"),

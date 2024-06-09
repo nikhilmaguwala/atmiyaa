@@ -1,26 +1,36 @@
 import React from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import login from "../../img/login.jpg";
 
 //create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+  const gotoRegistrationForm = () => {
+    window.location.href = "/register";
+  };
+
+  return (
+    <div>
+      <div
+        className="background"
+        style={{ backgroundImage: `url(${login})` }}
+      ></div>
+      <div
+        className="form-group"
+        style={{
+          textAlign: "center",
+        }}
+      >
+        <button
+          name="Registration"
+          value="Registration"
+          className="submit-btn"
+          onClick={gotoRegistrationForm}
+        >
+          Registration
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default Home;
