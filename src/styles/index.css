@@ -39,9 +39,23 @@ html {
   width: 100%;
   max-width: 230px;
   margin: auto;
-  margin-top: 83vh;
+  margin-top: 78vh;
   display: block;
   font-size: 18px;
+}
+
+@media screen and (min-width: 1024px) and (min-height: 1320px) {
+  /* iPad Pro */
+  .submit-btn {
+    margin-top: 83vh;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-height: 1310px) {
+  /* Laptop */
+  .submit-btn {
+    margin-top: 83vh;
+  }
 }
 
 .register-background {
